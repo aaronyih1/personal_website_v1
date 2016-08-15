@@ -1,0 +1,42 @@
+html{
+	background-color: black;
+}
+nav{
+	color:white;
+}
+#hud_info{
+	color:white;
+	max-width:500px;
+}
+#test{
+	background-color: red;
+	height:200px;
+	width: 300px;
+	position: fixed;
+	z-index: 1000;
+	opacity: 0.6;
+}
+
+/*Typed Cursor///////////////////////////////////////////////*/
+.typed-cursor{
+	color:white;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
