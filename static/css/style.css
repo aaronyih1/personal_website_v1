@@ -1,20 +1,34 @@
 html{
 	background-color: black;
+	font-family: 'San Francisco';
 }
-nav{
+ul{
+	list-style-type: none;
+}
+#hud{
 	color:white;
-}
-#hud_info{
-	color:white;
-	max-width:500px;
-}
-#test{
-	background-color: red;
-	height:200px;
-	width: 300px;
 	position: fixed;
 	z-index: 1000;
-	opacity: 0.6;
+	opacity: 0.45;
+	font-size: 14pt;
+}
+header{
+	color:inherit;
+}
+#insert_date{
+	color:inherit;
+}
+nav{
+	position: inherit;
+	color:inherit;
+	left:20px;
+	bottom: 50px;
+}
+#hud_info{
+	position: inherit;
+	max-width:300px;
+	right:300px;
+	bottom: 50px;
 }
 
 /*Typed Cursor///////////////////////////////////////////////*/

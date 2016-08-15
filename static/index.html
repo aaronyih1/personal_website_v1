@@ -5,6 +5,7 @@
     <title>Panorama</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/sanfrancisco-font.css">
     <script src="js/typed.js"></script>
     <script>
       $(function(){
@@ -19,21 +20,26 @@
 https://cdnjs.cloudflare.com/ajax/libs/aframe/0.2.0/aframe.js"></script>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li>home</li>
-        <li>projects</li>
-        <li>interests</li>
-        <li>about this site</li>
-        <li>stats</li>
-        <li>customer support</li>
-      </ul>
-    </nav>
-    <section id="hud_info">
-        <div id="typed-strings">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit sodales enim nec tempor. Fusce cursus odio a purus pulvinar, id consequat est consectetur. Ut sit amet iaculis turpis. Nulla sit amet enim mollis nunc tincidunt sollicitudin. Curabitur finibus quam in lacus fermentum, ut pretium magna elementum.</p>
-        </div>
-        <span id="typed" style="white-space:pre-wrap;"></span>
+    <section id="hud">
+      <header id="date_and_time">
+        <p id="insert_date"></p>
+      </header>
+      <nav>
+        <ul>
+          <li>home</li>
+          <li>projects</li>
+          <li>interests</li>
+          <li>stats</li>
+          <li>about this site</li>
+          <li>customer support</li>
+        </ul>
+      </nav>
+      <section id="hud_info">
+          <div id="typed-strings">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit sodales enim nec tempor. Fusce cursus odio a purus pulvinar, id consequat est consectetur. Ut sit amet iaculis turpis. Nulla sit amet enim mollis nunc tincidunt sollicitudin. Curabitur finibus quam in lacus fermentum, ut pretium magna elementum.</p>
+          </div>
+          <span id="typed" style="white-space:pre-wrap;"></span>
+      </section>
     </section>
 <!--     <a-scene>
       <a-assets>
@@ -41,5 +47,6 @@ https://cdnjs.cloudflare.com/ajax/libs/aframe/0.2.0/aframe.js"></script>
       </a-assets>
       <a-videosphere src="#background"></a-videosphere>
     </a-scene> -->
+    <script src="js/timer.js"></script>
   </body>
 </html>
