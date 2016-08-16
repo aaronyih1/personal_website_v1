@@ -20,26 +20,27 @@
 https://cdnjs.cloudflare.com/ajax/libs/aframe/0.2.0/aframe.js"></script>
   </head>
   <body>
-    <section id="hud">
-      <header id="date_and_time">
-        <p id="insert_date"></p>
-      </header>
-      <nav>
-        <ul>
-          <li>home</li>
-          <li>projects</li>
-          <li>interests</li>
-          <li>stats</li>
-          <li>about this site</li>
-          <li>customer support</li>
-        </ul>
-      </nav>
+    <header id="date_and_time" class="hud">
+      <p id="insert_date"></p>
+    </header>
+    <section id="lower_hud" class="hud">
+      <div id="description_placeholder"></div>
       <section id="hud_info">
           <div id="typed-strings">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit sodales enim nec tempor. Fusce cursus odio a purus pulvinar, id consequat est consectetur. Ut sit amet iaculis turpis. Nulla sit amet enim mollis nunc tincidunt sollicitudin. Curabitur finibus quam in lacus fermentum, ut pretium magna elementum.</p>
+            <p>In case you don’t remember, this is your favorite memory. That’s why you set it as your default. I’m HUDson, and as you look around, I’ll help clarify some of the memories you’re revisiting. </p>
           </div>
           <span id="typed" style="white-space:pre-wrap;"></span>
       </section>
+      <nav>
+        <ul class="menu_text">
+          <li class="menu_tab center_one_line">home</li>
+          <li class="menu_tab center_one_line">projects</li>
+          <li class="menu_tab center_one_line">interests</li>
+          <li class="menu_tab center_one_line">stats</li>
+          <li class="menu_tab"><span class="center_two_line">about this site</span></li>
+          <li class="menu_tab "><span class="center_two_line">customer support</span></li>
+        </ul>
+      </nav>
     </section>
 <!--     <a-scene>
       <a-assets>
