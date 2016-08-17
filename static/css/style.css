@@ -2,6 +2,22 @@ html{
 	background-color: black;
 	font-family: 'San Francisco';
 }
+.loader{
+	width: 300px;
+	height:8px;
+	border-radius: 5px;
+	background-color: none;
+	position: absolute;
+	
+}
+#loader_outer{
+	border: 2px solid white;
+}
+#loader_inner{
+	background-color: white;
+	border-radius: 3px;
+	width: 50%;
+}
 .hud{
 	color:white;
 	z-index: 1000;

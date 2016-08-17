@@ -1,9 +1,9 @@
-var msec = Date.parse("Auguest 12, 2016 19:32:24");
-console.log("hello");
+var msec = new Date.parse("August 12th, 2016, 19:32:24");
+var temp= msec.getTime();
 window.setInterval(upTime, 1000);
 
 function upTime() {
-	msec+=1000;
-	var d = new Date(msec);
+	temp+=1000;
+	var d = new Date(temp);
 	document.getElementById("insert_date").innerHTML = d;
 }
