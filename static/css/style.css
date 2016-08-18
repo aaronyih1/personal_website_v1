@@ -2,12 +2,21 @@ html{
 	background-color: black;
 	font-family: 'San Francisco';
 }
+.progress{
+	position: absolute;
+	left:50%;
+	margin-left: -150px;
+	top:50%;
+	margin-top: -4px
+}
 .loader{
 	width: 300px;
 	height:8px;
 	border-radius: 5px;
 	background-color: none;
 	position: absolute;
+	z-index: 9999;
+	display: none;
 	
 }
 #loader_outer{
@@ -16,8 +25,55 @@ html{
 #loader_inner{
 	background-color: white;
 	border-radius: 3px;
-	width: 50%;
+	width: 10%;
 }
+#filter_layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+/*.fade{
+	animation: fadein 5s;
+}
+@keyframes fadein{
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+}*/
+/*a-scene{
+	filter: blur(7px) brightness(0.75);
+    -webkit-filter: blur(7px) brightness(0.75);
+    -moz-filter: blur(7px) brightness(0.75);
+    -ms-filter: blur(7px) brightness(0.75);
+    -o-filter: blur(7px) brightness(0.75);
+}*/
+
+/*#blur_loader{
+	width: 100vw;
+	height: 100vh;
+	-webkit-filter: blur(20px);     
+	filter: blur(20px);   
+	z-index: 100000;
+	display: block;
+	position: absolute;
+	color:white;
+	opacity: 1;
+	left:-15px;
+	right:-15px;
+	top:-15px;
+	bottom:-15px;
+}*/
 .hud{
 	color:white;
 	z-index: 1000;
