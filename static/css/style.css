@@ -27,76 +27,31 @@ html{
 	border-radius: 3px;
 	width: 10%;
 }
-#filter_layer {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10000;
-    user-drag: none; 
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    pointer-events: none;
-    filter: blur(20px) brightness(0.75);
-    -webkit-filter: blur(20px) brightness(1.2);
-    -moz-filter: blur(20px) brightness(0.75);
-    -ms-filter: blur(20px) brightness(0.75);
-    -o-filter: blur(20px) brightness(0.75);
-}
-
-/*@keyframes test{
-	from{
-		filter: blur(20px) brightness(0.75);
-		-webkit-filter: blur(20px) brightness(1.2);
-		-moz-filter: blur(20px) brightness(0.75);
-		-ms-filter: blur(20px) brightness(0.75);
-		-o-filter: blur(20px) brightness(0.75);
-	}
-	to{
-		filter: blur(5px) brightness(0.75);
-		-webkit-filter: blur(5px) brightness(1.2);
-		-moz-filter: blur(5px) brightness(0.75);
-		-ms-filter: blur(5px) brightness(0.75);
-		-o-filter: blur(5px) brightness(0.75);
-	}
-
-}*/
-/*.fade{
-	animation: fadein 5s;
-}
-@keyframes fadein{
-	0% {
-	  opacity: 0;
-	}
-	100% {
-	  opacity: 1;
-	}
-}*/
-/*a-scene{
-	filter: blur(7px) brightness(0.75);
-    -webkit-filter: blur(7px) brightness(0.75);
-    -moz-filter: blur(7px) brightness(0.75);
-    -ms-filter: blur(7px) brightness(0.75);
-    -o-filter: blur(7px) brightness(0.75);
-}*/
-
-/*#blur_loader{
+#image_blur_container{
+	overflow: hidden;
+	position: absolute;
 	width: 100vw;
 	height: 100vh;
-	-webkit-filter: blur(20px);     
-	filter: blur(20px);   
-	z-index: 100000;
-	display: block;
-	position: absolute;
-	color:white;
-	opacity: 1;
-	left:-15px;
-	right:-15px;
-	top:-15px;
-	bottom:-15px;
-}*/
+	z-index: 10000;
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	pointer-events: none;
+}
+#filter_layer {
+	width: 110vw;
+	height: 110vh;
+    filter: blur(30px) brightness(1.2);
+    -webkit-filter: blur(30px) brightness(1.2);
+    -moz-filter: blur(30px) brightness(1.2);
+    -ms-filter: blur(30px) brightness(1.2);
+    -o-filter: blur(30px) brightness(1.2);
+    margin: -5vw -5vh;
+
+}
 .hud{
 	color:white;
 	z-index: 1000;
@@ -161,10 +116,13 @@ ul{
 	left:0;
 	background-color: rgba(45,123,126,0.6);
 }
+#typed-strings{
+	display: none;
+}
 #typed{
 	width: inherit;
 /*	position: absolute;*/
-	display: inline;
+	display: none;
 }
 .menu_tab{
 	background: url(../imgs/menu_tab.svg);

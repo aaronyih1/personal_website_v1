@@ -7,6 +7,14 @@ video.addEventListener('loadeddata', function() {
    			$(".loader").css("display","none");
    			$("#lower_hud").css("display", "block");
    			$("#date_and_time").css("display", "block");
+   			$("#typed-strings").css("display", "inline");
+   			$("#typed").css("display", "inline");
+   			$(function(){
+   			    $("#typed").typed({
+   			      stringsElement: $('#typed-strings'),
+   			      typeSpeed: 0
+   			    });
+   			});
    		});
    });
 }, false);
@@ -14,12 +22,12 @@ video.addEventListener('loadeddata', function() {
 $( document ).ready(function() {
    // Video is loaded and can be played
    $(function() {
-       $({blurRadius: 20}).animate({blurRadius: 5}, {
+       $({blurRadius: 30}).animate({blurRadius: 15}, {
            duration: 6500,
-           easing: 'easeInExpo', // or "linear"
+           easing: 'easeOutQuart', // or "linear"
                             // use jQuery UI or Easing plugin for more options
            step: function() {
-               console.log(this.blurRadius);
+               // console.log(this.blurRadius);
                $('#filter_layer').css({
                    "-webkit-filter": "blur("+this.blurRadius+"px) brightness(1.2)",
                    "filter": "blur("+this.blurRadius+"px) brightness(1.2)"

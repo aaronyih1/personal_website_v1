@@ -6,22 +6,49 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+          var visit=getCookie("COOKIE1");
+          console.log(getCookie("COOKIE1"));
+
+          if (!visit.length){
+              alert("buk lao");
+          }
+          else
+          {
+            alert("no");
+            console.log(visit);
+          }
+          var expire=new Date();
+          expire=new Date(expire.getTime()+7776000000);
+          document.cookie="COOKIE1=here; expires="+expire;
+      });
+      function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i <ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0)==' ') {
+                  c = c.substring(1);
+              }
+              if (c.indexOf(name) == 0) {
+                  return c.substring(name.length,c.length);
+              }
+          }
+          return "";
+      }
+    </script>
     <script src="js/progress.js"></script>
     <link rel="stylesheet" type="text/css" href="css/sanfrancisco-font.css">
     <script src="
     https://cdnjs.cloudflare.com/ajax/libs/aframe/0.2.0/aframe.js"></script>
     <script>
-      $(function(){
-          $("#typed").typed({
-            stringsElement: $('#typed-strings'),
-            typeSpeed: 0
-          });
-      });
     </script>
     <meta name="description" content="Panorama — A-Frame">
   </head>
   <body>
-    <img id="filter_layer" src="../imgs/abstract_leaves.jpg">
+    <div id="image_blur_container"><img id="filter_layer" src="../imgs/abstract_leaves.jpg"></div>
     <div class="progress">
       <div id="loader_outer" class="loader">
         <div id="loader_inner" class="loader bar"></div>
