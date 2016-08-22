@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Panorama</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script type="text/javascript">
-      $( document ).ready(function() {
           var visit=getCookie("COOKIE1");
           console.log(getCookie("COOKIE1"));
 
           if (!visit.length){
-              alert("buk lao");
-          }
-          else
-          {
-            alert("no");
-            console.log(visit);
+              window.location.replace("agreement.html");
           }
           var expire=new Date();
           expire=new Date(expire.getTime()+7776000000);
           document.cookie="COOKIE1=here; expires="+expire;
-      });
       function getCookie(cname) {
           var name = cname + "=";
           var ca = document.cookie.split(';');
@@ -39,6 +26,12 @@
           return "";
       }
     </script>
+    <meta charset="utf-8">
+    <title>Friday August 12th, 2016</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script src="js/progress.js"></script>
     <link rel="stylesheet" type="text/css" href="css/sanfrancisco-font.css">
     <script src="

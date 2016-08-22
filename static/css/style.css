@@ -107,7 +107,7 @@ ul{
 	height:187px;
 }
 #hud_info{
-	display:inline-block;
+	display:none;
 	position: absolute;
 	width:400px;
 	height:187px;

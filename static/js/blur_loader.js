@@ -7,12 +7,14 @@ video.addEventListener('loadeddata', function() {
    			$(".loader").css("display","none");
    			$("#lower_hud").css("display", "block");
    			$("#date_and_time").css("display", "block");
-   			$("#typed-strings").css("display", "inline");
+   			$("#hud_info").css("display", "inline-block")
+   			// $("#typed-strings").css("display", "inline");
    			$("#typed").css("display", "inline");
    			$(function(){
    			    $("#typed").typed({
    			      stringsElement: $('#typed-strings'),
-   			      typeSpeed: 0
+   			      typeSpeed: 0,
+   			      startDelay: 3000
    			    });
    			});
    		});
