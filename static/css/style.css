@@ -1,7 +1,102 @@
 html{
-	background-color: black;
+/*	background-color: black;*/
 	font-family: 'San Francisco';
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;    
 }
+/*////////////////GENERAL STLYES///////////////////////////////*/
+.centered_text{
+	text-align: center;
+}
+h1{
+	margin: 0;
+}
+a{
+	color:inherit;
+	text-decoration: none;
+}
+.disable_draggable{
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	pointer-events: none;
+}
+.parent_table{
+	display: table;
+	margin: 0 auto;
+}
+.child_table{
+	display: table-cell;
+	vertical-align: middle;
+	height: 100vh;
+}
+.button_container{
+	display: inline-block;
+	margin: 0 auto;
+}
+.button{
+	display: inline-block;
+	background-color: black;
+	width:220px;
+	height:42px;
+	line-height: 42px;
+}
+.secondary{
+	color: #686868;
+	margin-right:10px;
+}
+.primary{
+	color: #eeeeee;
+
+}
+/*////////////////AGREEMENT.HTML STLYES///////////////////////////////*/
+#agreement_body{
+	overflow: hidden;
+}
+#agreement_background{
+	position: absolute;
+	z-index: -1000000;
+	min-width: 100vw;
+	min-height: 100vh;
+	left: 0;
+	top:0;
+	filter: blur(45px) brightness(0.8);
+	-webkit-filter: blur(45px) brightness(0.8);
+	-moz-filter: blur(45px) brightness(0.8);
+	-ms-filter: blur(45px) brightness(0.8);
+	-o-filter: blur(45px) brightness(0.8);
+}
+#agreement_content_container{
+	display: table-cell;
+	vertical-align: middle;
+}
+#welcome{
+	margin-top:20px;
+	margin-bottom: 15px;
+}
+svg{
+	width:70px;
+	height:70px;
+	display: block;
+	margin: 0 auto;
+	margin-top: -100px;
+}
+#warning{
+	max-width:900px;
+	width: 40vw;
+	min-width: 300px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+
+/*////////////////INDEX.HTML STLYES///////////////////////////////*/
 .progress{
 	position: absolute;
 	left:50%;
@@ -33,13 +128,6 @@ html{
 	width: 100vw;
 	height: 100vh;
 	z-index: 10000;
-	user-drag: none; 
-	user-select: none;
-	-moz-user-select: none;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	pointer-events: none;
 }
 #filter_layer {
 	width: 110vw;
@@ -107,7 +195,7 @@ ul{
 	height:187px;
 }
 #hud_info{
-	display:none;
+	display:inline-block;
 	position: absolute;
 	width:400px;
 	height:187px;
@@ -116,13 +204,11 @@ ul{
 	left:0;
 	background-color: rgba(45,123,126,0.6);
 }
-#typed-strings{
-	display: none;
-}
+
 #typed{
 	width: inherit;
 /*	position: absolute;*/
-	display: none;
+	/*display: none;*/
 }
 .menu_tab{
 	background: url(../imgs/menu_tab.svg);

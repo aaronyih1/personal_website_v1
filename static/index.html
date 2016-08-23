@@ -41,7 +41,7 @@
     <meta name="description" content="Panorama — A-Frame">
   </head>
   <body>
-    <div id="image_blur_container"><img id="filter_layer" src="../imgs/abstract_leaves.jpg"></div>
+    <div id="image_blur_container" class="disable_draggable"><img id="filter_layer" src="../imgs/abstract_leaves.jpg"></div>
     <div class="progress">
       <div id="loader_outer" class="loader">
         <div id="loader_inner" class="loader bar"></div>
@@ -71,14 +71,14 @@
       </nav>
     </section>
     <div id="test"></div>
-    <a-scene >
+    <a-scene>
       <a-assets>
         <video id="background" autoplay loop="true" src="imgs/background.mp4">
       </a-assets>
+      <a-entity camera look-controls wasd-controls></a-entity>
       <a-videosphere src="#background" class="fade"></a-videosphere>
     </a-scene>
     <script src="js/blur_loader.js"></script>
-    
     <script src="js/date.js"></script>
     <script src="js/timer.js"></script>
     <script src="js/typed.js"></script>
