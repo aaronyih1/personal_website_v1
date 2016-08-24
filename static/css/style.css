@@ -73,10 +73,6 @@ a{
 	-ms-filter: blur(45px) brightness(0.8);
 	-o-filter: blur(45px) brightness(0.8);
 }
-#agreement_content_container{
-	display: table-cell;
-	vertical-align: middle;
-}
 #welcome{
 	margin-top:20px;
 	margin-bottom: 15px;
@@ -132,11 +128,16 @@ svg{
 #filter_layer {
 	width: 110vw;
 	height: 110vh;
-    filter: blur(30px) brightness(1.2);
+	filter: blur(45px) brightness(0.8);
+	-webkit-filter: blur(45px) brightness(0.8);
+	-moz-filter: blur(45px) brightness(0.8);
+	-ms-filter: blur(45px) brightness(0.8);
+	-o-filter: blur(45px) brightness(0.8);
+/*    filter: blur(30px) brightness(1.2);
     -webkit-filter: blur(30px) brightness(1.2);
     -moz-filter: blur(30px) brightness(1.2);
     -ms-filter: blur(30px) brightness(1.2);
-    -o-filter: blur(30px) brightness(1.2);
+    -o-filter: blur(30px) brightness(1.2);*/
     margin: -5vw -5vh;
 
 }
@@ -227,6 +228,56 @@ ul{
 }
 .center_one_line{
 	line-height: 37px;
+}
+/*////////////////REGISTRATION.HTML STLYES///////////////////////////////*/
+#registration_body{
+	background-color: black;
+	color:#40b549;
+	height: 100vh;
+	width:100vw;
+}
+.subtext{
+	position: absolute;
+	color:#40b549;
+	left: 20px;
+	top:5px;
+	font-size: 8pt;
+
+}
+#registration_content{
+	margin-top:-50px;
+}
+.registration_title{
+	font-weight: 200;
+	letter-spacing: 3.5px;
+	margin-bottom: -7px;
+	text-transform: uppercase;
+}
+.registration_body_text{
+	font-weight: 100;
+	margin:10px 0px;
+	font-size: 9pt;
+}
+.registration_input_field{
+	background-color: #171617;
+	border: none;
+	border-bottom: 2px solid #333333;
+	min-width: 200px;
+	width: 35vw;
+	height: 30px;
+	outline:none;
+	box-sizing:border-box;
+}
+form{
+	margin-left: -5px;
+}
+.input_type{
+	color:#40b549;
+	padding-left: 3%;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: red !important;
 }
 
 /*Typed Cursor///////////////////////////////////////////////*/

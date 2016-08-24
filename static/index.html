@@ -1,31 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript">
-          var visit=getCookie("COOKIE1");
-          console.log(getCookie("COOKIE1"));
-
-          if (!visit.length){
-              window.location.replace("agreement.html");
-          }
-          var expire=new Date();
-          expire=new Date(expire.getTime()+7776000000);
-          document.cookie="COOKIE1=here; expires="+expire;
-      function getCookie(cname) {
-          var name = cname + "=";
-          var ca = document.cookie.split(';');
-          for(var i = 0; i <ca.length; i++) {
-              var c = ca[i];
-              while (c.charAt(0)==' ') {
-                  c = c.substring(1);
-              }
-              if (c.indexOf(name) == 0) {
-                  return c.substring(name.length,c.length);
-              }
-          }
-          return "";
-      }
-    </script>
     <meta charset="utf-8">
     <title>Friday August 12th, 2016</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -61,7 +36,7 @@
       </section>
       <nav>
         <ul class="menu_text">
-          <li class="menu_tab center_one_line">home</li>
+          <li class="menu_tab center_one_line"><a href="index.html">home</a></li>
           <li class="menu_tab center_one_line">projects</li>
           <li class="menu_tab center_one_line">interests</li>
           <li class="menu_tab center_one_line">stats</li>
@@ -71,7 +46,7 @@
       </nav>
     </section>
     <div id="test"></div>
-    <a-scene>
+    <a-scene vr-mode-ui="enabled: false">
       <a-assets>
         <video id="background" autoplay loop="true" src="imgs/background.mp4">
       </a-assets>
@@ -79,6 +54,35 @@
       <a-videosphere src="#background" class="fade"></a-videosphere>
     </a-scene>
     <script src="js/blur_loader.js"></script>
+    <script>
+      var visit=getCookie("COOKIE2");
+      console.log(getCookie("COOKIE2"));
+      if (!visit.length){
+        firstTransition();
+      }
+      else{
+        secondTransition();
+      }
+      var expire=new Date();
+      expire=new Date(expire.getTime()+7776000000);
+      document.cookie="COOKIE2=here; expires="+expire;
+
+      function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i <ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0)==' ') {
+                  c = c.substring(1);
+              }
+              if (c.indexOf(name) == 0) {
+                  return c.substring(name.length,c.length);
+              }
+          }
+          return "";
+      }
+
+    </script>
     <script src="js/date.js"></script>
     <script src="js/timer.js"></script>
     <script src="js/typed.js"></script>

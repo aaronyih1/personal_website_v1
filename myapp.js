@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('static'));
+app.use(express.static('static', {index: 'agreement.html'}));
 
 app.get('/', function (req, res) {
   res.send('Hello World!');

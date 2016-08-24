@@ -5,11 +5,15 @@
     <title>Memory Setup</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/sanfrancisco-font.css">
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="js/cookies.js"></script>
   </head>
   <body id="agreement_body" class="centered_text">
+  	<img id="agreement_background" src="imgs/abstract_leaves.jpg"/>
   	<div class="parent_table">
 	  	<div id="agreement_content_container" class="child_table">
-		  	<img id="agreement_background" src="imgs/abstract_leaves.jpg"/>
 		  	<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		  		 viewBox="-514 230 170 170" style="enable-background:new -514 230 170 170;" xml:space="preserve">
 		  	<path d="M-363.6,360.2c-2.5,5.7-5.4,10.9-8.7,15.7c-4.6,6.5-8.3,11.1-11.2,13.6c-4.5,4.1-9.3,6.2-14.4,6.4c-3.7,0-8.1-1-13.3-3.2
@@ -23,11 +27,20 @@
 		  	<h1 id="welcome">Welcome Back.</h1>
 		  	<p id="warning" class="centered_text">By entering the site, you consent to enter the world with the idenity that you’ve acquired. Some identities are highly unfavorable, and you are not entitled to a refund. Please take complaints to customer support.</p>
 		  	<div class="button_container">
-		  		<div class="button secondary">setup with new identity</div>
-		  		<div class="button primary"><a href="index.html">restore from old identity</a></div>
+		  		<a href="register.html"><div class="button secondary">setup with new identity</div></a>
+		  		<a href="index.html" onclick="test(event)"><div class="button primary">restore from old identity</div></a>
 		  	</div>
 	  	</div>
   	</div>
-  	<script src="js/typed.js"></script>
+  	<script>
+  		function test(e){
+  			e.preventDefault();
+  			$("#agreement_content_container").fadeOut(2000, function(){
+          window.location = "index.html"
+
+        ;} )
+  				
+  	}
+  	</script>
   </body>
 </html>
