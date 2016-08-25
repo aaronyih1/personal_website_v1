@@ -1,8 +1,7 @@
 function firstTransition(){
-  console.log("first");
   var count = 0;
   var video = document.getElementById('background');
-
+  $("#typed-strings-2").css("display", "none");
   $( document ).ready(function() {
      $(function() {
          $({blurRadius: 45}).animate({blurRadius: 15}, {
@@ -35,7 +34,7 @@ function firstTransition(){
                   $("#typed").css("display", "inline");
           
             $("#typed").typed({
-              stringsElement: $('#typed-strings'),
+              stringsElement: $('#typed-strings-1'),
               typeSpeed: 0,
               startDelay: 3000
             });
@@ -46,9 +45,9 @@ function firstTransition(){
 
 }
 function secondTransition(){
-    console.log("second");
     var count = 0;
     var video = document.getElementById('background');
+    $("#typed-strings-1").css("display", "none");
     $( document ).ready(function() {
        $(function() {
            $({blurRadius: 45}).animate({blurRadius: 15}, {
@@ -75,9 +74,9 @@ function secondTransition(){
        $("#typed").css("display", "inline");
        
        $("#typed").typed({
-         stringsElement: $('#typed-strings'),
+         stringsElement: $('#typed-strings-2'),
          typeSpeed: 0,
-         startDelay: 3000
+         startDelay: 6500
        });
     }, false);
 }

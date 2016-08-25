@@ -1,3 +1,4 @@
+$( document ).ready(function() {
     var visit=getCookie("COOKIE1");
     console.log(getCookie("COOKIE1"));
     if (!visit.length){
@@ -13,6 +14,7 @@
     var expire=new Date();
     expire=new Date(expire.getTime()+7776000000);
     document.cookie="COOKIE1=here; expires="+expire;
+});
 
 function getCookie(cname) {
     var name = cname + "=";
